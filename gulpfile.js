@@ -20,18 +20,12 @@ var config = {
     imgPath: 'img/'
 };
 
-
-gulp.task('Styles', function (callback) {
-    runSequence(
-        'Styles.clean',
-        'Styles.scss',
-        'Styles.plaincss',
-        'Styles.minifycss',
-        callback);
+gulp.task('Styles.clean', function (callback) {
+    return del(config.mainPath + config.assetPath + config.cssPath + '*.*', callback);
 });
 
 gulp.task('Styles.scss', function () {
-    return sass('src/scss/main.scss')
+    return sass(config.srcPath + 'scss/main.scss')
         .on('error', function (error) {
             var lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
             notify({
@@ -66,12 +60,19 @@ gulp.task('Styles.minifycss', function () {
     return gulp.src([config.mainPath + config.assetPath + config.cssPath + 'normalize.css', config.mainPath + config.assetPath + config.cssPath + 'animate.min.css' , config.mainPath + config.assetPath + config.cssPath + 'main.css'])
         .pipe(concat('style.css'))
         .pipe(rename({suffix: '.min'}))
-        //.pipe(minifycss())
+        .pipe(minifycss())
         .pipe(gulp.dest(config.mainPath + config.assetPath + config.cssPath))
 });
 
-gulp.task('Styles.clean', function (callback) {
-    return del(config.mainPath + config.assetPath + config.cssPath + '*.*', callback);
+
+
+gulp.task('Styles', function (callback) {
+    runSequence(
+        'Styles.clean',
+        'Styles.scss',
+        'Styles.plaincss',
+        'Styles.minifycss',
+        callback);
 });
 
 gulp.task('Watch', function () {

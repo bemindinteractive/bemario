@@ -15,6 +15,7 @@ Bemario is created and maintained by *[Bemind](http://bemind.me/bemario)*
 ## Installation
 npm install
 bower install
+sudo gem install bourbon
 
 ### Prerequisites
 
