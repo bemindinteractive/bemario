@@ -1,0 +1,262 @@
+.mnu-page__content {
+  position: relative;
+  background-color: $white;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* fix bug on iOS */
+  height: 100vh;
+  overflow-y: auto;
+
+  @include zindex($zindex-navigation);
+  @include transform(translateZ(0));
+  @include transition(transform 0.7s);
+  @include transition-timing-function(cubic-bezier(.91, .01, .6, .99));
+  .navigation--open & {
+    @include transform(translateX(100%));
+  }
+}
+
+.navigation--open {
+  overflow: hidden;
+}
+
+.mnu-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $yellow-good;
+  color: $white;
+  visibility: hidden;
+  @include transition(visibility 0s 0.7s);
+
+  &--close {
+    @extend .o-absolute-mnu__button;
+    background-color: $font-color;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    right: 0;
+    @include maskSvg(mnu__nav--close);
+    &:hover {
+      background-color: $gray-darkest;
+    }
+  }
+
+  &--logo {
+    @extend .o-absolute-mnu__button;
+    width: 10rem;
+    background-color: transparent;
+    @include bgSvg(bemind__logo--bold--white);
+    left: 50%;
+    margin-left:-5rem;
+    &--black {
+      background-image: none;
+      @include bgSvg(bemind__logo--bold--black);
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .mnu-navigation-wrapper {
+
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include transform(translateX(-50%));
+    @include transition(transform 0.7s);
+    @include transition-timing-function(cubic-bezier(.86, .05, .77, .78));
+  }
+
+  .mnu-navigation__list{
+    @include container();
+    margin:0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding:0;
+
+    &--cat{
+      margin: 0;
+      margin-top: -$space--small;
+      padding: 0;
+    }
+  }
+  .mnu-navigation__table{
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+    .mnu-navigation__item {
+
+      list-style: none;
+      @include t-text-align(center);
+      &--cat {
+        display: inline;
+        font-family: $font-family--secondary;
+        font-size: $font-size-xx-small;
+        & .mnu-navigation__blog--cat {
+          display: inline-block;
+          background-color: $mnu-background-color--hover;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          border-radius: 0.25rem;
+          padding: 0.25rem 0.5rem;
+          margin:0 0.25rem;
+          @include transition(background-color, color, 0.7s ease);
+          &:hover, &.mnu-navigation__blog--active {
+            background-color: $white;
+            color: $yellow-good;
+          }
+        }
+      }
+    }
+      .mnu-navigation__link {
+        text-decoration: none;
+        margin: $space--mid;
+        color: $white;
+
+        &:hover {
+          .mnu-navigation__title {
+            color: $font-color;
+          }
+        }
+      }
+        .mnu-navigation__subtitle{
+          margin: 0;
+          font-size: $font-size-base;
+          font-family: $font-family;
+        }
+        .mnu-navigation__title {
+          font-family: $font-family--secondary;
+          text-transform: uppercase;
+          margin:$space--small/2 0;
+          font-size: $font-size-xxx-large;
+          @include transition(color, 0.7s ease);
+        }
+
+  .navigation--open & {
+    visibility: visible;
+    @include transition(visibility 0s 0s);
+    .mnu-navigation-wrapper {
+      @include transform(translateX(0));
+      @include transition(transform 0.7s - 0.2s);
+      @include transition-timing-function(cubic-bezier(.82, .01, .77, .78));
+    }
+  }
+
+  @include susy-breakpoint($desktop, $generic_container--map) {
+    .mnu-navigation-wrapper {
+      @include clearfix;
+    }
+  }
+}
+
+.nav--scroll {
+  height: 4rem;
+  position: fixed;
+  width: 100%;
+  top: -4rem;
+  left: 0;
+  background-color: $white;
+  z-index: 2;
+  @include transform(translateZ(0));
+  @include transition(all 0.7s);
+  @include transition-timing-function(cubic-bezier(.91, .01, .6, .99));
+  .navigation--open & {
+    @include transform(translateX(100%));
+  }
+  &--back, &--mnu {
+    @extend .o-absolute-mnu__button;
+  }
+  &--back {
+    @include bgSvg(blog__nav--back);
+    left: 0;
+  }
+
+  &--mnu {
+    @include bgSvg(blog__nav--mnu);
+    right: 0;
+  }
+  &--logo {
+    @extend .o-absolute-mnu__button;
+    width: 10rem;
+    background-color: transparent;
+    @include bgSvg(bemind__logo--bold--black);
+    left: 50%;
+    margin-left:-5rem;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &--open {
+    top: 0;
+  }
+  &--titlegroup {
+
+    @include t-text-align(center);
+    @include span(12 of 12);
+    padding: 0 4rem 0 4rem;
+    padding-top: 0.5rem;
+    .c-blog__subtitle--navbar {
+      display: none;
+    }
+
+    @include susy-breakpoint($desktop, $generic_container--map) {
+      @include span(10 of 12);
+      @include t-text-align(right);
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 1.15625rem;
+      .c-blog__subtitle--navbar {
+        display: initial;
+      }
+    }
+  }
+
+  &__reading-time {
+    @include span(12 of 12);
+    padding: 0 4rem 0 4rem;
+
+    @include susy-breakpoint($desktop, $generic_container--map) {
+      @include span(2 of 12);
+      padding-top: 0.5rem;
+    }
+
+  }
+  &__reading-total {
+    @include t-text-align(center);
+    font-size: $font-size-xx-small;
+    font-weight: bold;
+    display: none;
+    @include susy-breakpoint($desktop, $generic_container--map) {
+      display: block;
+    }
+  }
+  &__reading-progress {
+    @include t-text-align(center);
+
+    &__item {
+      font-size: $font-size-xx-small;
+      color: $gray-lightest;
+      &--active {
+        color: $gray-dark;
+      }
+    }
+    @include susy-breakpoint($desktop, $generic_container--map) {
+      @include bgSvg(reading-time);
+      padding-top: 1rem;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+  }
+}

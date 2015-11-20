@@ -1,0 +1,39 @@
+<nav id="mnu-nav" class="mnu-nav">
+    <div class="mnu-navigation-wrapper">
+        <a class="mnu-nav--close" href="#">
+
+        </a>
+        <a class="mnu-nav--logo" href="#">
+
+        </a>
+        <div class="mnu-navigation__table">
+            <ul class="mnu-navigation__list">
+                <li class="mnu-navigation__item">
+                    <a href="#" class="mnu-navigation__link">
+                        <h5 class="mnu-navigation__subtitle">Case studies</h5>
+                        <h4 class="mnu-navigation__title">Dolor sit amet</h4>
+                    </a>
+                </li>
+                <li class="mnu-navigation__item">
+                    <a href="#" class="mnu-navigation__link">
+                        <h5 class="mnu-navigation__subtitle">Dolor sit </h5>
+                        <h4 class="mnu-navigation__title">a lot of money</h4>
+                    </a>
+                </li>
+                <li class="mnu-navigation__item">
+                    <a href="#" class="mnu-navigation__link">
+                        <h5 class="mnu-navigation__subtitle">Tarapia & tapioca</h5>
+                        <h4 class="mnu-navigation__title">Sit antani amet</h4>
+                    </a>
+                    <ul class="mnu-navigation__list--cat">
+                        {{#foreach navigation}}
+                            <li class="nav-{{slug}} mnu-navigation__item--cat {{#if current}} nav-current{{/if}}">
+                                <a href="{{url absolute="true"}}" class="mnu-navigation__blog--cat mnu-navigation__blog--active">{{label}}</a>
+                            </li>
+                        {{/foreach}}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

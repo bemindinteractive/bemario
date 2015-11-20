@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<g style="enable-background:new    ;">
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" x="-479.9355469" y="-4128.0292969" width="1680" height="5130"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="-479.9355469" y="-4128.0292969" width="1680" height="5130"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_5_" x="-479.9355469" y="-4128.0292969" width="1680" height="5130"/>
+			</defs>
+			<clipPath id="SVGID_6_">
+				<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+			</clipPath>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_7_" d="M18.3564453,30.9345703h-6.3339844V15.9980469H8.8564453v-5.1474609h3.1660156V7.7607422
+			c0-4.1972656,1.7861328-6.6953125,6.8642578-6.6953125h4.2275391v5.1484375h-2.6425781
+			c-1.9765625,0-2.1074219,0.71875-2.1074219,2.0605469l-0.0087891,2.5761719h4.7871094l-0.5595703,5.1474609h-4.2275391v14.9365234
+			H18.3564453z"/>
+	</defs>
+	<clipPath id="SVGID_8_">
+		<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_8_);">
+		<defs>
+			<rect id="SVGID_9_" x="8.7919922" y="-0.5966797" width="140" height="32"/>
+		</defs>
+		<clipPath id="SVGID_10_">
+			<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="3.8564453" y="-3.9345703" style="clip-path:url(#SVGID_10_);fill:#B2B2B2;" width="24.2861328" height="39.8691406"/>
+	</g>
+</g>
+</svg>

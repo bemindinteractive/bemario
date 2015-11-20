@@ -1,0 +1,22 @@
+$desktop: 1280px;
+$tablet: 960px;
+
+
+$generic__column--number: 12;
+$generic__column--gutter: 1.5;
+
+$layout__boxed--width: 80rem;
+
+$generic_container--map: (
+        math: fluid,
+        output: float,
+        container: auto,
+        container-position: center,
+        columns: $generic__column--number,
+        gutters: $generic__column--gutter,
+        gutter-position: inside,
+        global-box-sizing: border-box,
+        column-width: false,
+
+);
+

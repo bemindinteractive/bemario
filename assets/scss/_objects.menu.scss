@@ -1,0 +1,14 @@
+.o-absolute-mnu__button {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 4rem;
+  width: 4rem;
+  background-color: $white;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include transition(background-color 500ms ease);
+  &:hover {
+    background-color: $gray-lightest;
+  }
+}

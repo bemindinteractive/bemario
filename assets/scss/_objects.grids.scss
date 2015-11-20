@@ -1,0 +1,6 @@
+.o-row {
+  @include make-row();
+  @include clearfix();
+}
+/* generic 12 cols based on settings */
+@include make-grid-columns($generic__column--number);

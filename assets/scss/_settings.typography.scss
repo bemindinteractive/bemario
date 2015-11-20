@@ -1,0 +1,37 @@
+
+$base-font--size: 1rem !global;
+
+$font-family: 'Droid Serif', Serif;
+$font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
+$font-family--secondary: 'Raleway', sans-serif;
+$font-family--secondary: "Gotham SSm A", "Gotham SSm B", sans-serif;
+
+//** Font-size
+$font-size-base:          16px !default;
+$font-size-jumbo:         ceil(($font-size-base * 74/16)) !default; // ~72vvpx
+$font-size-huge:          ceil(($font-size-base * 50/16)) !default; // ~48vvpx
+
+$font-size-xxx-large:     ceil(($font-size-base * 44/16)) !default; // ~42vvpx
+$font-size-xx-large:      ceil(($font-size-base * 38/16)) !default; // ~36px
+$font-size-x-large:       ceil(($font-size-base * 30/16)) !default; // ~28px
+$font-size-large:         ceil(($font-size-base * 26/16)) !default; // ~24px
+
+$font-size-x-medium:      ceil(($font-size-base * 22/16)) !default; // ~20px
+$font-size-medium:        ceil(($font-size-base * 20/16)) !default; // ~18px
+
+$font-size-small:         ceil(($font-size-base * 16/16)) !default; // ~14px
+$font-size-x-small:       ceil(($font-size-base * 14/16)) !default; // ~12px
+$font-size-xx-small:      ceil(($font-size-base * 12/16)) !default; // ~10px
+
+//** Font-weight
+$font-weight-light: 200;
+$font-weight-base: 300;
+$font-weight-bold: 500;
+$font-weight-heavy: 600;
+$font-weight-black: 900;
+
+$font-color: $gray-dark;
+
+$space--big: 4rem;
+$space--mid: 2rem;
+$space--small: 1rem;

@@ -1,0 +1,18 @@
+body {color: $font-color;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;}
+
+.o-title {
+  font-family: $font-family--secondary;
+  font-size: $font-size-jumbo;
+  margin: 0;
+}
+
+.o-subtitle {
+  font-family: $font-family;
+  font-size: $font-size-medium;
+  margin: 0;
+}

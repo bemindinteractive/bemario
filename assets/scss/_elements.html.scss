@@ -1,0 +1,25 @@
+body, html {
+    /* prevent horizontal scrolling */
+    overflow-x: hidden;
+}
+img {
+    width:100%;
+    display: block;
+}
+
+
+p {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+    &:first-of-type {
+        margin-top: initial;
+    }
+    &:last-of-type {
+        margin-bottom: initial;
+    }
+}
+
+blockquote, figure {
+    margin: 1.5rem auto;
+}

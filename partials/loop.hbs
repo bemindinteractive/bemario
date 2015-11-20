@@ -1,0 +1,51 @@
+{{! Previous/next page links - only displayed on page 2+
+<div class="extra-pagination inner">
+    {{!pagination
+</div>
+}}
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+    {{#if @first}}
+    <li class="c-blog__list__item c-blog__list__item--first" style="background-image: url({{image}});"
+        data-img="{{image}}">
+        <div class="o-container--boxed c-blog__list__item--wrapper">
+            <div class="c-blog__titles ">
+                <h5 class="c-blog__subtitle  c-blog__subtitle c-blog__subtitle--list--header vibrant">
+                    {{#foreach tags}}
+                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                    {{/foreach}}</h5>
+
+                <h3 class="c-blog__title fittext-mid vibrant">
+                    {{{title}}}
+                    <!--span class="c-blog__title--bold ">Ratione festus equiso est.</span> the monkey shapes-->.
+                </h3>
+                <h5 class="c-blog__subtitle c-blog__subtitle--list vibrant">{{excerpt words="26"}}</h5>
+            </div>
+            <a href="{{url}}" class="c-blog__list__button">
+                Leggi tutto
+            </a>
+        </div>
+    </li>
+    {{else}}
+    <li class="c-blog__list__item" style="background-image: url({{image}});" data-img="{{image}}">
+        <a href="#" class="o-container--boxed c-blog__list__item--wrapper">
+
+            <div class="c-blog__titles ">
+                <h5 class="c-blog__subtitle  c-blog__subtitle c-blog__subtitle--list--header">
+                    {{#foreach tags}}
+                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                    {{/foreach}}
+                </h5>
+
+                <h3 class="c-blog__title fittext-mid">
+                    {{{title}}}
+                </h3>
+            </div>
+        </a>
+    </li>
+    {{/if}}
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{!pagination}}

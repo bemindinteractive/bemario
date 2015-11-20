@@ -1,0 +1,23 @@
+{
+  "name": "Bemind",
+  "version": "0.0.0",
+  "authors": [
+    "daniele-k <daniele.inchingoli@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.6",
+    "normalize-css": "~3.0.3"
+  }
+}

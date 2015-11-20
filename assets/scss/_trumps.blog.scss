@@ -1,0 +1,19 @@
+.t-blog {
+
+  &__date{
+    @include bgSvg(blog-num-1);
+    min-height: 5rem;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 1rem;
+    &--number {
+      font-size: $font-size-small;
+    }
+    &--progressive {
+      font-size: $font-size-x-medium;
+    }
+
+  }
+
+
+}

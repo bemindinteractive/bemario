@@ -1,0 +1,21 @@
+.o-container {
+
+  &--boxed{
+    @include layout($generic_container--map);
+    @include container($layout__boxed--width);
+  }
+
+  &--full {
+    @include container();
+
+  }
+  &--nav {
+    @include container();
+    @include susy-breakpoint($desktop,$generic_container--map){
+    margin: auto 4.5rem;
+    }
+
+  }
+}
+
+
