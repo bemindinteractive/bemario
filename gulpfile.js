@@ -64,8 +64,6 @@ gulp.task('Styles.minifycss', function () {
         .pipe(gulp.dest(config.mainPath + config.assetPath + config.cssPath))
 });
 
-
-
 gulp.task('Styles', function (callback) {
     runSequence(
         'Styles.clean',
@@ -73,6 +71,12 @@ gulp.task('Styles', function (callback) {
         'Styles.plaincss',
         'Styles.minifycss',
         callback);
+});
+
+gulp.task('compress', function () {
+    return gulp.src('*')
+        .pipe(zip('archive.zip'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('Watch', function () {

@@ -167,6 +167,7 @@
   left: 0;
   background-color: $white;
   z-index: 2;
+  border-bottom: 2px solid #f2f2f2;
   @include transform(translateZ(0));
   @include transition(all 0.7s);
   @include transition-timing-function(cubic-bezier(.91, .01, .6, .99));
@@ -175,6 +176,7 @@
   }
   &--back, &--mnu {
     @extend .o-absolute-mnu__button;
+    border-bottom: 2px solid #f2f2f2;
   }
   &--back {
     @include bgSvg(blog__nav--back);
@@ -216,7 +218,7 @@
       @include t-text-align(right);
       padding-left: 0;
       padding-right: 0;
-      padding-top: 1.15625rem;
+      padding-top: 1rem;
       .c-blog__subtitle--navbar {
         display: initial;
       }
@@ -235,8 +237,9 @@
   }
   &__reading-total {
     @include t-text-align(center);
+    font-family: $font-family--secondary;
     font-size: $font-size-xx-small;
-    font-weight: bold;
+    font-weight: $font-weight-heavy;
     display: none;
     @include susy-breakpoint($desktop, $generic_container--map) {
       display: block;

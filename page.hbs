@@ -1,31 +1,127 @@
 {{!< default}}
 
-{{! This is a page template. A page outputs content just like any other post, and has all the same
-    attributes by default, but you can also customise it to behave differently if you prefer. }}
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! Everything inside the #post tags pulls data from the page }}
+{{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-</header>
+    <article class="c-blog__single ">
+        <div class="o-container--boxed">
+            <header class="c-blog__header">
+                <div class="c-blog__titles ">
+                    <h3 class="c-blog__subtitle c-blog__subtitle--bold">
+                        {{#foreach tags}}
+                            <span title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                        {{/foreach}} - {{date format="DD MMMM YYYY"}}</h3>
 
-<main class="content" role="main">
-    <article class="{{post_class}}">
+                    <h1 class="c-blog__title vibrant-alt fittext">
+                        {{title}}
+                    </h1>
+                </div>
+                <div class="c-blog__excerpt fittext--more">
+                    <div class="c-blog__excerpt--content vibrant-alt">
+                        <p>
+                            {{excerpt characters="140"}}
+                        </p>
+                    </div>
+                </div>
+            </header>
 
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-        </header>
-
-        <section class="post-content">
-            {{content}}
+        </div>
+        <section class="o-container--full">
+            <div class="c-blog__image--main " style="background-image:url({{image}}); ">
+                <img class="c-blog__image--main-img" src="{{image}}"/>
+            </div>
         </section>
 
+        <section class="o-container--boxed">
+            <div id="post-content" class="o-row">
+                {{content}}
+            </div>
+            <div class="o-row">
+                <div class="c-blog__share">
+                    {{#author}}
+                        <div class="c-blog__share__end">
+                            <div class="c-blog__author">
+                                {{#if image}}
+                                    <figure class="c-blog__author--figure">
+                                        <img src="{{image}}"/>
+                                    </figure>
+                                {{/if}}
+                                <div class="c-blog__author--profile">
+                                    <span class="c-blog__author--name">{{name}}</span>
+                                    <span class="c-blog__author--role">{{bio}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    {{/author}}
+
+
+                    <div class="c-blog__share__platform">
+                        <a class="c-blog__share__platform--twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden"></span>
+                        </a>
+                        <a class="c-blog__share__platform--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden"></span>
+                        </a>
+                        <a class="c-blog__share__platform--linkedin" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <span class="hidden"></span>
+                        </a>
+                    </div>
+                    <small class="c-blog__share__end--small">Se ti è piaciuto l'articolo, condividi!</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="o-container--full">
+            <div class="c-blog__footer c-blog__footer__single">
+                {{#next_post}}
+                    <a href="{{url}}" class="c-blog__footer__single--right" style="background-image: url({{image}})">
+                        <div class="c-blog__footer__single--inner">
+                            <div class="c-blog__titles">
+                                <div class="c-blog__subtitle">
+                                    {{#foreach tags}}
+                                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                                    {{/foreach}} - {{date format="DD MMMM YYYY"}}
+                                </div>
+
+                                <div class="c-blog__title fittext">
+                                    {{title}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {{/next_post}}
+
+                {{#prev_post}}
+                    <a href="{{url}}" class="c-blog__footer__single--left" style="background-image: url({{image}})">
+                        <div class="c-blog__footer__single--inner">
+                            <div class="c-blog__titles ">
+                                <div class="c-blog__subtitle">
+                                    {{#foreach tags}}
+                                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                                    {{/foreach}} - {{date format="DD MMMM YYYY"}}
+                                </div>
+
+                                <div class="c-blog__title fittext">
+                                    {{title}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {{/prev_post}}
+
+            </div>
+        </section>
     </article>
-</main>
+
+
 {{/post}}
+
+
+

@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "susy": "~2.2.6",
-    "normalize-css": "~3.0.3"
+    "normalize-css": "~3.0.3",
+    "animate.css": "animate-css#~3.4.0"
   }
 }

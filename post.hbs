@@ -10,9 +10,9 @@
         <div class="o-container--boxed">
             <header class="c-blog__header">
                 <div class="c-blog__titles ">
-                    <h3 class="c-blog__subtitle">
+                    <h3 class="c-blog__subtitle c-blog__subtitle--bold">
 	                    {{#foreach tags}}
-		                    <a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</a> {{#if @last}}{{else}}/{{/if}}
+		                    <span title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
 	                    {{/foreach}} - {{date format="DD MMMM YYYY"}}</h3>
 
                     <h1 class="c-blog__title vibrant-alt fittext">

@@ -13,7 +13,7 @@
             <div class="c-blog__titles ">
                 <h5 class="c-blog__subtitle  c-blog__subtitle c-blog__subtitle--list--header vibrant">
                     {{#foreach tags}}
-                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                        <span title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
                     {{/foreach}}</h5>
 
                 <h3 class="c-blog__title fittext-mid vibrant">
@@ -34,7 +34,7 @@
             <div class="c-blog__titles ">
                 <h5 class="c-blog__subtitle  c-blog__subtitle c-blog__subtitle--list--header">
                     {{#foreach tags}}
-                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                        <span title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
                     {{/foreach}}
                 </h5>
 
