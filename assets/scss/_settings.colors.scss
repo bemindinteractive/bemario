@@ -6,8 +6,11 @@ $gray-light:    #9B9B9B;
 $gray-dark:     #4A4A4A;
 $gray-darker:   #8c8c8c;
 $gray-darkest:  #666;
-$yellow-good: #fcc100;
+$yellow-good:   #fcc100;
 
 $mnu-background-color: $yellow-good;
 $mnu-background-color--hover: darken($yellow-good, 10%);
 $mnu-font-color: $white;
+
+$color-link:    $yellow-good;
+$color-link-hover: darken($yellow-good, 10%);

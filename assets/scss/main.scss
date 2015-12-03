@@ -1,37 +1,93 @@
 @charset "UTF-8";
+
+/*
+  DEPENDENCIES
+  (eg. Fonts, Grid system)
+*/
 @import "../../bourbon/bourbon";
 
-/*@import url(https://fonts.googleapis.com/css?family=Cousine:400,700|Droid+Serif:400,400italic,700italic,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,300,200,500,600,700,800,900);*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100);
+
 @import "../../bower_components/susy/sass/susy";
 
-
+/*
+  SETTINGS
+  Globally-available settings.
+  Config switches.
+  Brand colours, etc.
+*/
 @import
   "settings.global",
   "settings.colors",
   "settings.typography",
   "settings.containers";
 
+/*
+  TOOLS
+  Globally-available tools.
+  Public mixins.
+  Helper functions.
+*/
 @import
   "tools.grids",
   "tools.typography",
   "tools.images",
   "tools.containers";
 
+/*
+  GENERIC
+  Ground zero styles.
+  Low-specificity, far-reaching.
+  Resets, Normalize.css, etc.
+*/
 @import
-  "elements.html";
+  "generic.reset",
+  "generic.normalize";
 
+/*
+  ELEMENTS
+  Unclassed HTML elements.
+  H1–H6, basic links, lists, etc.
+  Last layer we see type selectors (e.g. a {}, blockquote {}).
+*/
+@import "elements.headings",
+        "elements.links",
+        "elements.page";
+
+/*
+  OBJECTS
+  OOCSS.
+  Design patterns.
+  No cosmetics.
+  Begin using classes exclusively.
+  Agnostically named (e.g. .ui-list{}).
+*/
 @import
   "objects.containers",
   "objects.grids",
   "objects.typography",
   "objects.menu";
 
+/*
+  COMPONENTS
+  Designed pieces of UI.
+  Still only using classes.
+  More explicitly named (e.g. .products-list {}).
+*/
 @import
   "components.menu",
   "components.blog";
 
+/*
+  TRUMPS
+  Overrides, helpers, utilities.
+  Only affect one piece of the DOM at a time.
+  Usually carry !important.
+*/
 @import
+  "trumps.typography",
   "trumps.blog";
 
 
