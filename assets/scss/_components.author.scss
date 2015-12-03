@@ -1,0 +1,44 @@
+.c-author {
+    display: inline-block;
+    margin: 0 auto;
+    @include clearfix();
+
+    &__figure {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+        float: left;
+        margin-top: 1.25rem;
+    }
+
+    &__image {
+
+    }
+    &__profile {
+        margin: 1.67rem auto;
+        margin-left: 0.5rem;
+        display: inline-block;
+        float: left;
+        height: 2rem;
+        font-family: $font-family--secondary;
+        line-height: 1.25;
+        @include t-text-align(left);
+
+    }
+    &__name {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        display: block;
+        font-size: $font-size-small;
+    }
+    &__role {
+        display: block;
+        text-transform: capitalize;
+        font-size: $font-size-x-small;
+        font-weight: $font-weight-bold;
+        font-family: $font-family;
+    }
+
+}

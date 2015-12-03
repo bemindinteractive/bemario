@@ -22,7 +22,7 @@
                 <div class="c-blog__excerpt fittext--more">
                     <div class="c-blog__excerpt__content vibrant-alt">
                         <p>
-                            {{excerpt characters="160"}}...
+                            {{excerpt words="35"}}...
                         </p>
                     </div>
                 </div>
@@ -43,15 +43,15 @@
                 <div class="c-blog__share">
                     {{#author}}
                         <div class="c-blog__share__end">
-                            <div class="c-blog__author">
+                            <div class="c-author">
                                 {{#if image}}
-                                    <figure class="c-blog__author--figure">
+                                    <figure class="c-author__figure">
                                         <img src="{{image}}"/>
                                     </figure>
                                 {{/if}}
-                                <div class="c-blog__author--profile">
-                                    <span class="c-blog__author--name">{{name}}</span>
-                                    <span class="c-blog__author--role">{{bio}}</span>
+                                <div class="c-author__profile">
+                                    <span class="c-author__name">{{name}}</span>
+                                    <span class="c-author__role">{{bio}}</span>
                                 </div>
                             </div>
                         </div>
@@ -79,27 +79,29 @@
         </section>
 
         <section class="o-container--full">
-            <div class="c-blog__footer c-blog__footer__single">
+            <div class="c-blog__footer">
                 {{#next_post}}
-                    <a href="{{url}}" class="c-blog__footer__single--right" style="background-image: url({{image}})">
-                        <div class="c-blog__footer__single--inner">
-                            <div class="c-blog__titles">
-                                <div class="c-blog__subtitle">
-		                            {{#foreach tags}}
-                                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
-		                            {{/foreach}} - {{date format="DD MMMM YYYY"}}
-                                </div>
+                    <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--right">
+                            <img class="c-blog__list__item__image" src="{{image}}">
+                            <div class="c-blog__footer__single--inner">
+                                <div class="c-blog__titles">
+                                    <div class="c-blog__subtitle">
+                                        {{#foreach tags}}
+                                            <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                                        {{/foreach}} - {{date format="DD MMMM YYYY"}}
+                                    </div>
 
-                                <div class="c-blog__title fittext">
-	                                {{title}}
+                                    <div class="c-blog__title fittext">
+                                        {{title}}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </a>
                 {{/next_post}}
 
                 {{#prev_post}}
-                    <a href="{{url}}" class="c-blog__footer__single--left" style="background-image: url({{image}})">
+                    <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--left">
+                        <img class="c-blog__list__item__image" src="{{image}}">
                         <div class="c-blog__footer__single--inner">
                             <div class="c-blog__titles ">
                                 <div class="c-blog__subtitle">

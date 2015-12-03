@@ -39,7 +39,7 @@ $(function () {
     })
 
 
-//Reading time total
+    //Reading time total
     $('.fittext').fitText();
     $('.fittext-mid').fitText(1.6, {minFontSize: '32px', maxFontSize: '36px'});
 
@@ -94,9 +94,11 @@ $(function () {
         });
     }
 
-    $.readingProgress({
-        startFrom: $('.c-blog__image--main')
-    });
+    if($('.c-blog__image--main').length > 0){
+        $.readingProgress({
+            startFrom: $('.c-blog__image--main')
+        });
+    }
 
     $('#post-content img').unwrap('p');
     $('#post-content p, #post-content ol, #post-content ul').wrap('<div class="c-blog__content"></div>');

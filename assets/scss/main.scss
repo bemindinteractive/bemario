@@ -77,8 +77,11 @@
   More explicitly named (e.g. .products-list {}).
 */
 @import
+  "components.author",
+  "components.buttons",
   "components.menu",
-  "components.blog";
+  "components.blog.post",
+  "components.blog.list";
 
 /*
   TRUMPS
