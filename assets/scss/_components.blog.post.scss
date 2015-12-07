@@ -326,3 +326,50 @@
         }
     }
 }
+
+.c-blog-footer{
+    padding: 1rem;
+    background-color: $gray-lightest;
+
+    &__logo {
+        display: block;
+        width: 100%;
+        height: 4rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 80%;
+        position: relative;
+        opacity: 0.3;
+        @include zindex(2);
+        @include clearfix();
+    }
+    &__copyright{
+        font-family: $font-family--secondary;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xx-small;
+        color: $gray-light;
+        text-transform: uppercase;
+
+        @include t-text-align(center);
+        @include span(12);
+        @include clearfix();
+        @include susy-breakpoint($desktop, $generic_container--map) {
+            @include span(8 of 12);
+            @include push(2)
+        }
+    }
+    &__poweredby{
+        font-family: $font-family--secondary;
+        font-weight: $font-weight-light;
+        font-size: $font-size-xxx-small;
+        color: $gray-light;
+
+        @include t-text-align(center);
+        @include span(12);
+        @include clearfix();
+        @include susy-breakpoint($desktop, $generic_container--map) {
+            @include span(8 of 12);
+            @include push(2)
+        }
+    }
+}

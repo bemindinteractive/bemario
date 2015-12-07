@@ -7,7 +7,6 @@
         &__wrapper {
             padding: 0;
             margin: 0;
-
         }
         &__item {
             padding: 1rem;
@@ -52,6 +51,7 @@
                 width: 100%;
                 display: table;
                 background-size: cover;
+                background-position: center center;
                 & .c-blog__list__item--wrapper {
                     display: table-cell;
                     padding: 20vh 0;
@@ -94,7 +94,9 @@
                 margin-left: -48px;
                 @include zindex($zindex-layout);
             }
+            &:last-child{
 
+            }
             &--wrapper {
                 @include zindex($zindex-layout);
                 position: relative;

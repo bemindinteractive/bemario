@@ -34,13 +34,15 @@
         {{! Everything else gets inserted here }}
         {{{body}}}
 
-        <!--footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer-->
+        <footer class="c-blog-footer o-container--full">
+            <section class="c-blog-footer__copyright">
+                <a class="c-blog-footer__logo" style="background-image:url({{@blog.logo}}" href="{{@blog.url}}"></a>
+                <div>{{@blog.title}}</div>
+            </section>
+            <section class="c-blog-footer__poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> - &copy; {{date format="YYYY"}}</section>
+        </footer>
     </main>
     {{> "innernav"}}
-
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 

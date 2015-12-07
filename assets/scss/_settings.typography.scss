@@ -20,6 +20,9 @@ $font-size-medium:        ceil(($font-size-base * 20/16)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 16/16)) !default; // ~14px
 $font-size-x-small:       ceil(($font-size-base * 14/16)) !default; // ~12px
 $font-size-xx-small:      ceil(($font-size-base * 12/16)) !default; // ~10px
+$font-size-xxx-small:     ceil(($font-size-base * 10/16)) !default; // ~8px
+$font-size-xxxx-small:    ceil(($font-size-base * 8/16)) !default; // ~6px
+
 
 //** Font-weight
 $font-weight-light: 200;
