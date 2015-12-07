@@ -41,6 +41,7 @@ $(function () {
 
     //Reading time total
     $('.fittext').fitText();
+    $('.fittext-subtitle').fitText(1.8, { minFontSize: '24px', maxFontSize: '38px' });
     $('.fittext-mid').fitText(1.6, {minFontSize: '32px', maxFontSize: '36px'});
 
     $.fn.readingtime = function (options) {

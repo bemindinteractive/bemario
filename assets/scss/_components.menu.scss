@@ -37,18 +37,24 @@
   .navigation--open & {
     @include transform(translateX(100%));
   }
-  &--back, &--mnu {
+  &--mnu{
     @extend .o-absolute-mnu__button;
+    @include bgSvg(blog__nav--mnu);
     border-bottom: 2px solid #f2f2f2;
+    right: 0;
   }
-  &--back {
+  &--back-base {
+    @extend .o-absolute-mnu__button;
     @include bgSvg(blog__nav--back);
     left: 0;
+    z-index: 2;
   }
-
-  &--mnu {
-    @include bgSvg(blog__nav--mnu);
-    right: 0;
+  &--back {
+    @extend .o-absolute-mnu__button;
+    @include bgSvg(blog__nav--back);
+    border-bottom: 2px solid #f2f2f2;
+    left: 0;
+    z-index: 2;
   }
   &--logo {
     @extend .o-absolute-mnu__button;
@@ -67,11 +73,9 @@
     top: 0;
   }
   &--titlegroup {
-
     @include t-text-align(center);
     @include span(12 of 12);
-    padding: 0 4rem 0 4rem;
-    padding-top: 0.5rem;
+    padding: 1.1rem 4rem 0;
     .c-blog__subtitle--navbar {
       display: none;
     }

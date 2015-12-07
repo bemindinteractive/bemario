@@ -5,6 +5,7 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
+    <a class="nav--scroll--back-base" href="/"></a>
 
     <article class="c-blog__single ">
         <div class="o-container--boxed">
@@ -19,10 +20,10 @@
                         {{title}}
                     </h1>
                 </div>
-                <div class="c-blog__excerpt fittext--more">
-                    <div class="c-blog__excerpt__content vibrant-alt">
+                <div class="c-blog__excerpt">
+                    <div class="c-blog__excerpt__content vibrant-alt fittext-subtitle">
                         <p>
-                            {{excerpt words="35"}}...
+                            {{excerpt words="25"}}...
                         </p>
                     </div>
                 </div>
