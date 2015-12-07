@@ -37,7 +37,7 @@
                 <a class="c-blog-footer__logo" style="background-image:url({{@blog.logo}}" href="{{@blog.url}}"></a>
                 <div>{{@blog.title}}</div>
             </section>
-            <section class="c-blog-footer__poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> - &copy; {{date format="YYYY"}}</section>
+            <section class="c-blog-footer__poweredby">Proudly published with <a href="mailto:hello@bemind.me">Bemind</a> - Blog based on <a href="https://github.com/bemindinteractive/bemario">Bemario Theme</a> - &copy; {{date format="YYYY"}}</section>
         </footer>
     </main>
     {{> "innernav"}}
@@ -52,6 +52,7 @@
 
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/script.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/tiltfx.js"}}"></script>
 
 </body>
 </html>

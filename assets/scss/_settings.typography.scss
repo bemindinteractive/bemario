@@ -2,10 +2,14 @@
 $base-font--size: 1rem !global;
 
 $font-family: "Merriweather", Serif;
+$font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
 $font-family--secondary: "Montserrat", sans-serif;
+$font-family--secondary: "Gotham SSm A", "Gotham SSm B", sans-serif;
 
 //** Font-size
 $font-size-base:          16px !default;
+
+$font-size-mega:          ceil(($font-size-base * 130/16)) !default; // ~124vvpx
 $font-size-jumbo:         ceil(($font-size-base * 74/16)) !default; // ~72vvpx
 $font-size-huge:          ceil(($font-size-base * 50/16)) !default; // ~48vvpx
 

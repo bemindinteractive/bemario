@@ -69,8 +69,8 @@
                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                             <span class="hidden"></span>
                         </a>
-                        <a class="c-blog__share__platform--linkedin" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <a class="c-blog__share__platform--linkedin" href="https://www.linkedin.com/shareArticle?url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;">
                             <span class="hidden"></span>
                         </a>
                     </div>
@@ -81,6 +81,29 @@
 
         <section class="o-container--full">
             <div class="c-blog__footer">
+                {{#prev_post}}
+                    <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--left">
+                        <img class="c-blog__list__item__image" src="{{image}}">
+                        <div class="c-blog__footer__single--inner">
+                            <div class="c-blog__titles ">
+                                <div class="c-blog__subtitle">
+                                    {{#foreach tags}}
+                                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+                                    {{/foreach}} - {{date format="DD MMMM YYYY"}}
+                                </div>
+
+                                <div class="c-blog__title fittext">
+                                    {{title}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {{else}}
+                    <div class="c-blog__footer__single c-blog__footer__single--left c-blog__footer__single--empty">
+                        &nbsp;
+                    </div>
+                {{/prev_post}}
+
                 {{#next_post}}
                     <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--right">
                             <img class="c-blog__list__item__image" src="{{image}}">
@@ -98,26 +121,13 @@
                                 </div>
                             </div>
                     </a>
+                {{else}}
+                    <div class="c-blog__footer__single c-blog__footer__single--right c-blog__footer__single--empty">
+                        &nbsp;
+                    </div>
                 {{/next_post}}
 
-                {{#prev_post}}
-                    <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--left">
-                        <img class="c-blog__list__item__image" src="{{image}}">
-                        <div class="c-blog__footer__single--inner">
-                            <div class="c-blog__titles ">
-                                <div class="c-blog__subtitle">
-	                                {{#foreach tags}}
-                                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
-	                                {{/foreach}} - {{date format="DD MMMM YYYY"}}
-                                </div>
 
-                                <div class="c-blog__title fittext">
-					                {{title}}
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                {{/prev_post}}
 
             </div>
         </section>

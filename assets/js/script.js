@@ -43,6 +43,7 @@ $(function () {
     $('.fittext').fitText();
     $('.fittext-subtitle').fitText(1.8, { minFontSize: '24px', maxFontSize: '38px' });
     $('.fittext-mid').fitText(1.6, {minFontSize: '32px', maxFontSize: '36px'});
+    $('.fittext-huge').fitText(0.7, {minFontSize: '74px', maxFontSize: '130px'});
 
     $.fn.readingtime = function (options) {
         var settings = $.extend({
@@ -113,6 +114,10 @@ $(function () {
     $('h1.c-blog__title').html($('.c-blog__title').html().split(', ').map(function(el) {return '<span>' + el + ' </span>'}))
     $('h1.c-blog__title span').first().addClass('c-blog__title--bold vibrant');
 
+    if($('h1.c-hero__title').length > 0){
+        $('h1.c-hero__title').html($('.c-hero__title').html().split(', ').map(function(el) {return '<span>' + el + ' </span>'}))
+        $('h1.c-hero__title span').last().addClass('c-hero__title--bold vibrant');
+    }
     //Paragraph on scroll
     $('.c-blog__content__section--title').each(function (i) {
         var text = $(this).text();
