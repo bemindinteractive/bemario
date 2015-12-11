@@ -114,7 +114,7 @@
      */
     TiltFx.prototype.options = {
         // number of extra image elements (div with background-image) to add to the DOM - min:1, max:5 (for a higher number, it's recommended to remove the transitions of .tilt__front in the stylesheet.
-        extraImgs : 2,
+        extraImgs : 3,
         // the opacity value for all the image elements.
         opacity : 0.7,
         // by default the first layer does not move.

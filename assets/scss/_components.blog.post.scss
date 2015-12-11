@@ -61,7 +61,7 @@
         line-height: 1;
 
         &--bold {
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-heavy;
         }
         &--navbar {
             font-size: $font-size-small;
@@ -173,6 +173,10 @@
         &__img {
 
             @include span(12);
+            @include susy-breakpoint($desktop, $generic_container--map) {
+                @include span(10 of 12);
+                @include push(1);
+            }
             &--caption {
                 @include t-text-align(center);
                 font-family: $font-family--secondary;

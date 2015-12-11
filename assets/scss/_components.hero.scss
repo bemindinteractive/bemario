@@ -18,11 +18,11 @@
         pointer-events: none;
         padding-top: 20vh;
         padding-bottom: 20vh;
-        //@include t-text-align(center);
+        @include t-text-align(center);
         @include span(12);
         @include clearfix();
         @include susy-breakpoint($desktop, $generic_container--map) {
-            @include span(8 of 12);
+            @include span(10 of 12);
             @include push(1);
         }
     }
@@ -32,9 +32,8 @@
         line-height: 1;
         color: #fff;
         font-size: $font-size-mega;
-        font-family: $font-family;
+        font-family: $font-family--secondary;
         font-weight: $font-weight-light;
-        font-style: italic;
 
         &--bold {
             font-weight: $font-weight-heavy ;
@@ -45,10 +44,9 @@
     &__subtitle {
         @extend .o-subtitle;
         margin: 0;
-        font-size: $font-size-x-small;
-        font-weight: $font-weight-heavy;
-        font-family: $font-family--secondary;
-        text-transform: uppercase;
+        font-size: $font-size-base;
+        font-weight: $font-weight-base;
+        font-family: $font-family;
         line-height: 1.4;
         margin: 0;
         margin-top: 1rem;

@@ -558,12 +558,12 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 .o-title, .c-blog__title {
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 74px;
   margin: 0; }
 
 .o-subtitle, .c-hero__subtitle, .c-blog__subtitle {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
+  font-family: "Merriweather", Serif;
   font-size: 20px;
   margin: 0; }
 
@@ -608,7 +608,7 @@ body {
     display: inline-block;
     float: left;
     height: 2rem;
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.25;
     text-align: left; }
   .c-author__name {
@@ -621,11 +621,11 @@ body {
     text-transform: capitalize;
     font-size: 14px;
     font-weight: 500;
-    font-family: "Sentinel SSm A", "Sentinel SSm B", Serif; }
+    font-family: "Merriweather", Serif; }
 
 .c-btn {
   display: inline-block;
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   color: #282941;
@@ -742,7 +742,7 @@ body {
         padding-top: 0.5rem; } }
   .nav--scroll__reading-total {
     text-align: center;
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 600;
     display: none; }
@@ -782,6 +782,7 @@ body {
     pointer-events: none;
     padding-top: 20vh;
     padding-bottom: 20vh;
+    text-align: center;
     width: 100%;
     float: left;
     padding-left: 2.5%;
@@ -793,7 +794,7 @@ body {
       clear: both; }
     @media (min-width: 1280px) {
       .c-hero__titlegroup {
-        width: 66.66667%;
+        width: 83.33333%;
         float: left;
         padding-left: 2.5%;
         padding-right: 2.5%;
@@ -804,18 +805,16 @@ body {
     line-height: 1;
     color: #fff;
     font-size: 130px;
-    font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
-    font-weight: 200;
-    font-style: italic; }
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200; }
     .c-hero__title--bold {
       font-weight: 600;
       font-style: normal; }
   .c-hero__subtitle {
     margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Merriweather", Serif;
     line-height: 1.4;
     margin: 0;
     margin-top: 1rem;
@@ -883,7 +882,7 @@ body {
     background-image: none, url("img//blog__nav--mnu.svg");
     right: 0; }
 .c-blog .c-blog__single {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
+  font-family: "Merriweather", Serif;
   font-size: 20px;
   font-weight: 200;
   line-height: 2; }
@@ -900,7 +899,7 @@ body {
   text-transform: uppercase;
   line-height: 1; }
   .c-blog__title--bold {
-    font-weight: 500; }
+    font-weight: 600; }
   .c-blog__title--navbar {
     font-size: 16px;
     text-transform: none; }
@@ -914,7 +913,7 @@ body {
     font-weight: 900; }
   .c-blog__subtitle--list {
     font-weight: 200;
-    font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
+    font-family: "Merriweather", Serif;
     line-height: 1.4;
     margin: 0;
     margin-top: 1rem;
@@ -926,7 +925,7 @@ body {
   margin-top: 4rem; }
   .c-blog__excerpt__content {
     text-align: center;
-    font-family: "Sentinel SSm A", "Sentinel SSm B", Serif;
+    font-family: "Merriweather", Serif;
     font-style: italic;
     font-size: 38px;
     line-height: 1.5;
@@ -966,7 +965,7 @@ body {
     float: left;
     padding-left: 2.5%;
     padding-right: 2.5%;
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 26px;
     font-weight: 500;
     margin-top: 2rem;
@@ -1007,9 +1006,16 @@ body {
     float: left;
     padding-left: 2.5%;
     padding-right: 2.5%; }
+    @media (min-width: 1280px) {
+      .c-blog__content__img {
+        width: 83.33333%;
+        float: left;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        margin-left: 8.33333%; } }
     .c-blog__content__img--caption {
       text-align: center;
-      font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+      font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       font-size: 12px;
       font-weight: bolder;
@@ -1091,13 +1097,13 @@ body {
   .c-blog__share__end {
     line-height: 1;
     color: #9B9B9B;
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 44px;
     text-transform: uppercase;
     border-bottom: 1px solid #dddddd; }
     .c-blog__share__end--small {
       color: #9B9B9B;
-      font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+      font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       font-size: 12px;
       font-weight: 300; }
@@ -1187,7 +1193,7 @@ body {
     .c-blog-footer__logo:after {
       clear: both; }
   .c-blog-footer__copyright {
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 12px;
     color: #9B9B9B;
@@ -1210,7 +1216,7 @@ body {
         padding-right: 2.5%;
         margin-left: 16.66667%; } }
   .c-blog-footer__poweredby {
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 200;
     font-size: 10px;
     color: #9B9B9B;
