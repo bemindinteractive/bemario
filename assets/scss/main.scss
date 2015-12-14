@@ -51,9 +51,10 @@
   H1–H6, basic links, lists, etc.
   Last layer we see type selectors (e.g. a {}, blockquote {}).
 */
-@import "elements.headings",
-        "elements.links",
-        "elements.page";
+@import
+  "elements.headings",
+  "elements.links",
+  "elements.page";
 
 /*
   OBJECTS
