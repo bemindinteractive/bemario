@@ -136,7 +136,7 @@ $(function () {
         $(this).css('opacity', 0);
         var parHandler = new Waypoint.Inview({
             element: $("figure[class^='c-blog__content__img'] img")[i],
-            entered: function (direction) {
+            enter: function (direction) {
                 $(this.element).addClass('animated fadeIn');
             },
             context: $('.mnu-page__content')

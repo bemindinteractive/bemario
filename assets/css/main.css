@@ -1239,6 +1239,10 @@ body {
         padding-right: 2.5%;
         margin-left: 16.66667%; } }
 
+.band-app-download {
+  background: #3db8de;
+  height: 120px; }
+
 .c-blog .c-blog__list {
   position: relative;
   z-index: 1; }

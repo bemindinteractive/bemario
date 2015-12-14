@@ -12,18 +12,18 @@
             <header class="c-blog__header">
                 <div class="c-blog__titles ">
                     <h3 class="c-blog__subtitle c-blog__subtitle--bold">
-	                    {{#foreach tags}}
-		                    <span title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
-	                    {{/foreach}} - {{date format="DD MMMM YYYY"}}</h3>
+						{{#foreach tags}}
+                            <span title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+						{{/foreach}} - {{date format="DD MMMM YYYY"}}</h3>
 
                     <h1 class="c-blog__title vibrant-alt fittext">
-                        {{title}}
+						{{title}}
                     </h1>
                 </div>
                 <div class="c-blog__excerpt">
                     <div class="c-blog__excerpt__content vibrant-alt fittext-subtitle">
                         <p>
-                            {{excerpt words="25"}}...
+							{{excerpt words="25"}}...
                         </p>
                     </div>
                 </div>
@@ -38,18 +38,18 @@
 
         <section class="o-container--boxed">
             <div id="post-content" class="o-row">
-                    {{content}}
+				{{content}}
             </div>
             <div class="o-row">
                 <div class="c-blog__share">
-                    {{#author}}
+					{{#author}}
                         <div class="c-blog__share__end">
                             <div class="c-author">
-                                {{#if image}}
+								{{#if image}}
                                     <figure class="c-author__figure">
                                         <img src="{{image}}"/>
                                     </figure>
-                                {{/if}}
+								{{/if}}
                                 <div class="c-author__profile">
                                     <span class="c-author__name">{{name}}</span>
                                     <span class="c-author__role">{{bio}}</span>
@@ -57,19 +57,22 @@
                             </div>
                         </div>
 
-                    {{/author}}
+					{{/author}}
 
 
                     <div class="c-blog__share__platform">
-                        <a class="c-blog__share__platform--twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        <a class="c-blog__share__platform--twitter"
+                           href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                             <span class="hidden"></span>
                         </a>
-                        <a class="c-blog__share__platform--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        <a class="c-blog__share__platform--facebook"
+                           href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                             <span class="hidden"></span>
                         </a>
-                        <a class="c-blog__share__platform--linkedin" href="https://www.linkedin.com/shareArticle?url={{url absolute="true"}}"
+                        <a class="c-blog__share__platform--linkedin"
+                           href="https://www.linkedin.com/shareArticle?url={{url absolute="true"}}"
                            onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;">
                             <span class="hidden"></span>
                         </a>
@@ -81,53 +84,56 @@
 
         <section class="o-container--full">
             <div class="c-blog__footer">
-                {{#prev_post}}
+
+				{{#prev_post}}
                     <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--left">
                         <img class="c-blog__list__item__image" src="{{image}}">
+
                         <div class="c-blog__footer__single--inner">
                             <div class="c-blog__titles ">
                                 <div class="c-blog__subtitle">
-                                    {{#foreach tags}}
-                                        <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
-                                    {{/foreach}} - {{date format="DD MMMM YYYY"}}
+									{{#foreach tags}}
+                                        <span href="{{url}}" title="{{name}}"
+                                              class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+									{{/foreach}} - {{date format="DD MMMM YYYY"}}
                                 </div>
 
                                 <div class="c-blog__title fittext">
-                                    {{title}}
+									{{title}}
                                 </div>
                             </div>
                         </div>
                     </a>
-                {{else}}
+				{{else}}
                     <div class="c-blog__footer__single c-blog__footer__single--left c-blog__footer__single--empty">
                         &nbsp;
                     </div>
-                {{/prev_post}}
+				{{/prev_post}}
 
-                {{#next_post}}
+				{{#next_post}}
                     <a href="{{url}}" class="c-blog__footer__single c-blog__footer__single--right">
-                            <img class="c-blog__list__item__image" src="{{image}}">
-                            <div class="c-blog__footer__single--inner">
-                                <div class="c-blog__titles">
-                                    <div class="c-blog__subtitle">
-                                        {{#foreach tags}}
-                                            <span href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
-                                        {{/foreach}} - {{date format="DD MMMM YYYY"}}
-                                    </div>
+                        <img class="c-blog__list__item__image" src="{{image}}">
 
-                                    <div class="c-blog__title fittext">
-                                        {{title}}
-                                    </div>
+                        <div class="c-blog__footer__single--inner">
+                            <div class="c-blog__titles">
+                                <div class="c-blog__subtitle">
+									{{#foreach tags}}
+                                        <span href="{{url}}" title="{{name}}"
+                                              class="tag-{{id}}">{{name}}</span> {{#if @last}}{{else}}/{{/if}}
+									{{/foreach}} - {{date format="DD MMMM YYYY"}}
+                                </div>
+
+                                <div class="c-blog__title fittext">
+									{{title}}
                                 </div>
                             </div>
+                        </div>
                     </a>
-                {{else}}
+				{{else}}
                     <div class="c-blog__footer__single c-blog__footer__single--right c-blog__footer__single--empty">
                         &nbsp;
                     </div>
-                {{/next_post}}
-
-
+				{{/next_post}}
 
             </div>
         </section>
@@ -135,6 +141,5 @@
 
 
 {{/post}}
-
 
 
