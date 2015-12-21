@@ -12,18 +12,9 @@ Bemario is a sensible collection of default styles and templates that can be mix
 
 Bemario is created and maintained by *[Bemind](http://bemind.me)*
 
-## Installation
-npm install
-bower install
-sudo gem install bourbon
-bourbon install
-
 ### Prerequisites
 
 1. Node.js
-2. Sass (libsass)
-3. Grunt
-
 
 ### Setup
 
@@ -33,4 +24,7 @@ Run `npm install` in the bemario directory to install gulp modules.
 
 Run `bower install` in the bemario directory to install bower modules.
 
+Run `gem install bourbon` and then `bourbon install` in the bemario directory to install bourbon.
+
 Run `gulp Style` to build the Sass files, or `gulp watch` when you are ready to start themeing.
+
